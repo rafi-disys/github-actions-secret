@@ -31,8 +31,6 @@ jobs:
           if["$password" == "rafi_002"];
           then
             echo "You got it right!"
-          else
-            echo "wrong password"
           fi
         env: 
           password: ${{secrets.PWD_SECRET}}
