@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Printing secret
         run: |
-          if["$password" -eq "rafi_002"]
+          if["$password" == "rafi_002"]
             echo "You got it right!"
           else
             echo "wrong password"
