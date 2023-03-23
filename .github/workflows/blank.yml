@@ -27,7 +27,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Printing secret
-        run: echo $password
+        run: |
+          if["$password" -eq "rafi_002"]
+            echo "You got it right!"
+          else
+            echo "wrong password"
+          fi
         env: 
           password: ${{secrets.PWD_SECRET}}
     
