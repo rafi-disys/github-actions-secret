@@ -27,4 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Printing secret
-        run: echo $secrets.PWD_SECRET
+        run: echo $password
+        env: 
+          password: ${{secrets.PWD_SECRET}}
+    
