@@ -28,10 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Printing secret
         run: |
-          if["$password" == "rafi_002"]
+          if[ "$ACTION_SECRET" == "rafi_002" ]
           then
             echo "You got it right!"
           fi
         env: 
-          password: ${{secrets.PWD_SECRET}}
+          ACTION_SECRET: ${{secrets.PWD_SECRET}}
     
